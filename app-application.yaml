@@ -6,6 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:
+    repoURL: https://github.com/PavelKrasko/ArgoCD.git
     path: app
-    
+    targetRevision: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
