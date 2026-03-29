@@ -1,0 +1,12 @@
+name: my-app
+app: my-app
+
+replicaCount: 3
+
+image: nginx
+
+containerPort: 80
+
+type: NodePort
+port: 80
+targetPort: 80
